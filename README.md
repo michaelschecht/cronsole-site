@@ -1,27 +1,27 @@
 <a id="readme-top"></a>
 
-<h1 align="center">TaskHub — Landing Site</h1>
+<h1 align="center">Cronsole — Landing Site</h1>
 
 <p align="center">
-  <em>The public front door for TaskHub — one pane of glass for every scheduled task.<br>A single, self-contained static page served on GitHub Pages.</em>
+  <em>The public front door for Cronsole — one pane of glass for every scheduled task.<br>A single, self-contained static page served on GitHub Pages.</em>
 </p>
 
 <p align="center">
-  <a href="https://taskhub.mikesailab.com"><strong>Visit the site »</strong></a>
+  <a href="https://cronsole.mikesailab.com"><strong>Visit the site »</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://taskhub.mikesailab.com">Live Site</a>
+  <a href="https://cronsole.mikesailab.com">Live Site</a>
   ·
-  <a href="https://github.com/michaelschecht/taskhub-site/issues">Report Bug</a>
+  <a href="https://github.com/michaelschecht/cronsole-site/issues">Report Bug</a>
   ·
-  <a href="https://github.com/michaelschecht/taskhub-site/issues">Request Feature</a>
+  <a href="https://github.com/michaelschecht/cronsole-site/issues">Request Feature</a>
 </p>
 
 <p align="center">
-  <a href="https://taskhub.mikesailab.com"><img src="https://img.shields.io/badge/Live_Site-taskhub.mikesailab.com-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live at taskhub.mikesailab.com"></a>
+  <a href="https://cronsole.mikesailab.com"><img src="https://img.shields.io/badge/Live_Site-cronsole.mikesailab.com-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live at cronsole.mikesailab.com"></a>
   <img src="https://img.shields.io/badge/status-Live-2ea44f?style=for-the-badge" alt="Status: Live">
-  <a href="https://mikesailab.com/taskhub-registry/"><img src="https://img.shields.io/badge/browse-TEMPLATES-8B5CF6?style=for-the-badge" alt="Browse templates"></a>
+  <a href="https://mikesailab.com/cronsole-registry/"><img src="https://img.shields.io/badge/browse-TEMPLATES-8B5CF6?style=for-the-badge" alt="Browse templates"></a>
 </p>
 
 <p align="center">
@@ -35,38 +35,47 @@
 
 ## 🧩 What this is
 
-This repository serves the **TaskHub landing page** — the public marketing/front-door site for
-[TaskHub](https://github.com/michaelschecht/taskhub), a local-first control plane for scheduled
+This repository serves Cronsole's **public front door** — the site for
+[Cronsole](https://github.com/michaelschecht/cronsole), a local-first control plane for scheduled
 tasks across Windows Task Scheduler, Claude Code / Codex routines, AI-agent jobs, and more.
+It doubles as the **template gallery** (see the maintenance note below).
 
 It is a **single self-contained `index.html`** (inline CSS + vanilla JS — no build step, no
 external CDN or fonts), served as static files over **GitHub Pages** at:
 
-> **`https://taskhub.mikesailab.com`**
+> **`https://cronsole.mikesailab.com`**
 
-The page pitches TaskHub and points visitors to the three public pieces of the project (below).
+The page pitches Cronsole and points visitors to the three public pieces of the project (below).
 
-## 🚀 The TaskHub project
+## 🚀 The Cronsole project
 
 | Piece | What it is |
 |:---|:---|
-| [**🧠 TaskHub app**](https://github.com/michaelschecht/taskhub) | The full stack — React dashboard, Node/Postgres backend, the .NET Windows agent, and the MCP server. *(Private during build; public at launch.)* |
-| [**🗃️ Template registry**](https://github.com/michaelschecht/taskhub-registry) | The public, versioned catalog — `index.json` + one JSON file per template, content-addressed with sha256 and served over a CDN. |
-| [**🖼️ Template gallery**](https://mikesailab.com/taskhub-registry/) | Browse, filter, and import the whole template catalog into your local TaskHub. |
+| [**🧠 Cronsole app**](https://github.com/michaelschecht/cronsole) | The full stack — React dashboard, Node/Postgres backend, the .NET Windows agent, and the MCP server. *(Private during build; public at launch.)* |
+| [**🗃️ Template registry**](https://github.com/michaelschecht/cronsole-registry) | The public, versioned catalog — `index.json` + one JSON file per template, content-addressed with sha256 and served over a CDN. |
+| [**🖼️ Template gallery**](https://mikesailab.com/cronsole-registry/) | Browse, filter, and import the whole template catalog into your local Cronsole. |
 
 ## 📦 What's inside
 
 | File | What it holds |
 |:---|:---|
-| [**`index.html`**](index.html) | The entire landing page — markup, inline styles, and the theme-toggle script. Self-contained and offline-capable. |
-| `CNAME` | The custom domain (`taskhub.mikesailab.com`). GitHub Pages reads this on build. |
+| [**`index.html`**](index.html) | The entire page — markup, inline styles, and the theme-toggle script. Self-contained and offline-capable. |
+| `CNAME` | The custom domain (`cronsole.mikesailab.com`). GitHub Pages reads this on build. |
 | `.nojekyll` | Tells GitHub Pages to serve the files raw (no Jekyll processing). |
 
 ## 🛠️ How this repo is maintained
 
-This repo is a **published mirror**. The source of truth is the `landing-site/` folder in the
-TaskHub app repo; a publish script (`scripts/publish-landing.ps1`) copies the page here and
+This repo is a **published mirror**. The source of truth is `registry-site/index.html` in the
+Cronsole app repo; a publish script (`scripts/publish-frontdoor.ps1`) copies the page here and
 pushes, and GitHub Pages rebuilds within about a minute.
+
+> [!IMPORTANT]
+> **This is the same page as the template gallery, published to a second host.** The standalone
+> marketing landing page was retired on 2026-07-28 and the gallery absorbed its product pitch,
+> quick start, and project links into its Home view. `publish-frontdoor.ps1` copies
+> `registry-site/index.html` here; `publish-registry.ps1` copies the identical file to
+> [`cronsole-registry`](https://github.com/michaelschecht/cronsole-registry). Run **both**, or the
+> two hosts silently drift.
 
 > [!NOTE]
 > Content here is generated from the source folder — an edit to `index.html` in this repo would
@@ -81,15 +90,15 @@ pushes, and GitHub Pages rebuilds within about a minute.
 
 | | |
 |:---|:---|
-| [**Live site**](https://taskhub.mikesailab.com) | The landing page this repo serves. |
-| [**TaskHub app**](https://github.com/michaelschecht/taskhub) | The application the site is about. |
-| [**Template gallery**](https://mikesailab.com/taskhub-registry/) | Browse and import automation templates. |
-| [**Issues**](https://github.com/michaelschecht/taskhub-site/issues) | Report a problem with the site. |
+| [**Live site**](https://cronsole.mikesailab.com) | The front door this repo serves. |
+| [**Cronsole app**](https://github.com/michaelschecht/cronsole) | The application the site is about. |
+| [**Template gallery**](https://mikesailab.com/cronsole-registry/) | Browse and import automation templates. |
+| [**Issues**](https://github.com/michaelschecht/cronsole-site/issues) | Report a problem with the site. |
 
 ---
 
 <p align="center">
-  <sub>Landing site for <a href="https://github.com/michaelschecht/taskhub">TaskHub</a> · served via GitHub Pages · Apache-2.0</sub>
+  <sub>Landing site for <a href="https://github.com/michaelschecht/cronsole">Cronsole</a> · served via GitHub Pages · Apache-2.0</sub>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

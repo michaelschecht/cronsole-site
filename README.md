@@ -62,6 +62,7 @@ The page pitches Cronsole and points visitors to the three public pieces of the 
 | [**`index.html`**](index.html) | The entire page — markup, inline styles, and the theme-toggle script. Self-contained and offline-capable. |
 | `CNAME` | The custom domain (`cronsole.mikesailab.com`). GitHub Pages reads this on build. |
 | `.nojekyll` | Tells GitHub Pages to serve the files raw (no Jekyll processing). |
+| [**`docs/`**](docs/ROADMAP.md) | The [roadmap](docs/ROADMAP.md) and [changelog](docs/CHANGELOG.md) for this repo. Not touched by the publish step. |
 
 ## 🛠️ How this repo is maintained
 

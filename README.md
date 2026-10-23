@@ -33,6 +33,9 @@
 
 ---
 
+> [!IMPORTANT]
+> **Retired 2026-10-23.** Cronsole's front door is [cronsole.ai-automation-tools.dev](https://cronsole.ai-automation-tools.dev), served from [ai-automation-tools/cronsole-site](https://github.com/ai-automation-tools/cronsole-site). This repo now only serves a redirect so old `cronsole.mikesailab.com` links still land; nothing publishes here any more. Keep `CNAME`. Everything below describes the page as it was.
+
 ## 🧩 What this is
 
 This repository serves Cronsole's **public front door** — the site for

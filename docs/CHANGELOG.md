@@ -12,6 +12,10 @@
 
 Seeded from `git log` on 2026-10-19. Each "Publish front door" commit is a mirror of `registry-site/index.html` from the cronsole repo; the page's own changes are in that repo's changelog, so they're listed here by date only.
 
+## 2026-10-23
+
+- **Retired.** `index.html` is now a redirect to `cronsole.ai-automation-tools.dev` (the org front door), keeping the path, query and hash. The mirrored gallery assets are removed and the Cronsole publish workflow no longer targets this repo. `CNAME` stays so `cronsole.mikesailab.com` keeps resolving.
+
 ## 2026-10-19
 
 - **Docs** — Added this changelog and [`ROADMAP.md`](ROADMAP.md) on the lab roadmap standard; the README links both. A full-history `gitleaks` scan came back clean.
